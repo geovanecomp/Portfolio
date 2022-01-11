@@ -1,0 +1,11 @@
+{% if projects %}
+    <ul>
+        {% for project in projects %}
+            <li>
+                <a href="#">project.title</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects availables</p>
+{% endif %}
