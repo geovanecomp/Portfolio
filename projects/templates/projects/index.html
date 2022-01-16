@@ -1,11 +1,21 @@
-{% if projects %}
-    <ul>
-        {% for project in projects %}
-            <li>
-                <a href="#">project.title</a>
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No projects availables</p>
-{% endif %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Portfolio Page</title>
+  </head>
+  <body>
+    <p> Hi there! Checkout this project list: </p>
+    {% if projects %}
+        <ul>
+            {% for project in projects %}
+                <li>
+                    <a href="{% url 'projects:detail' project.id %}">{{ project.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No projects availables</p>
+    {% endif %}
+  </body>
+</html>
