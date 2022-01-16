@@ -7,7 +7,7 @@ class Project(models.Model):
     """
     title = models.CharField(max_length=100)
     summary = models.CharField(max_length=200)
-    description = models.CharField(max_length=2000, null=True)
+    description = models.CharField(max_length=2000, null=True, blank=True)
     image = models.ImageField(upload_to='images/')
     pub_date = models.DateTimeField('date published')
     repository_link = models.URLField(max_length=200)
