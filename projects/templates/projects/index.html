@@ -6,16 +6,16 @@
   </head>
   <body>
     <p> Hi there! Checkout this project list: </p>
-    {% if projects %}
+    {% if project_list %}
         <ul>
-            {% for project in projects %}
+            {% for project in project_list %}
                 <li>
                     <a href="{% url 'projects:detail' project.id %}">{{ project.title }}</a>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No projects availables</p>
+        <p>No projects available.</p>
     {% endif %}
   </body>
 </html>
